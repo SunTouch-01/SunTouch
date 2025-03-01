@@ -1,0 +1,33 @@
+body{
+  padding: 0px;
+}
+html{
+  scroll-behavior: smooth;
+}
+.title {
+	color: #5C6AC4;
+}
+
+.hero_section{
+  position: relative;
+  background-image: url('Images/hero_section.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full-screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: -1;
+}
+.hero_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: 1; /* Below content */
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suntouch Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+	
+	<!-- Include Alpine.js & Swiper.js in the head section -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body class="bg-gray-50">
+
+<!-- Header -->
+<header class="bg-transparent text-white absolute w-full z-10">
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+        <!-- Logo & Company Name -->
+        <div class="flex items-center space-x-4">
+            <img src="Images/logo.png" alt="Company Logo" class="h-14 w-auto max-w-[120px] object-contain">
+            <h1 class="text-4xl font-bold">Suntouch Technology</h1>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+            ☰
+        </button>
+
+        <!-- Navigation Links for Desktop -->
+        <nav class="hidden md:flex space-x-7 ">
+            <a class="hover:text-2xl transition-all duration-500" href="index.html" class="nav-link">Home</a>
+            <a class="hover:text-2xl transition-all duration-500" href="index.html#about" class="nav-link">About Us</a>
+            <a class="hover:text-2xl transition-all duration-500" href="index.html#services" class="nav-link">Our Services</a>
+            <a class="hover:text-2xl transition-all duration-500" href="projects.html" class="nav-link">Projects</a>
+            <a class="hover:text-2xl transition-all duration-500" href="index.html#contact" class="nav-link">Contact Us</a>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-16 right-4 w-3/4 max-w-[250px] bg-gray-900 text-white p-4 space-y-2 rounded-lg shadow-lg">
+        <a href="index.html" class="block py-2 px-4 hover:bg-gray-700 rounded-md">Home</a>
+        <a href="index.html#about" class="block py-2 px-4 hover:bg-gray-700 rounded-md">About Us</a>
+        <a href="index.html#services" class="block py-2 px-4 hover:bg-gray-700 rounded-md">Our Services</a>
+        <a href="projects.html" class="block py-2 px-4 hover:bg-gray-700 rounded-md">Projects</a>
+        <a href="index.html#contact" class="block py-2 px-4 hover:bg-gray-700 rounded-md">Contact Us</a>
+    </div>
+</header>
+
+<!-- Hero Section for Projects Page -->
+<section class="hero_section" 
+    style="background-image: url('Images/project_page.jpeg');">
+
+    <div class="container mx-auto text-center px-6 z-20">
+        <h1 class="text-5xl font-bold mb-4">Our Featured Projects</h1>
+        <p class="text-lg mb-6">Discover our portfolio of innovative solutions</p>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+        <h3 class="text-3xl font-bold text-blue-900 mb-8">Featured Projects</h3>
+
+        <div class="flex flex-wrap justify-center gap-8">
+            <div x-data="{ open: false }" class="relative w-full max-w-sm">
+
+                <!-- Project Card -->
+                <div class="bg-white shadow-lg rounded-xl p-6 border border-gray-200">
+                    <h4 class="text-2xl font-bold text-gray-800 text-center mt-4">Doodle Homes</h4>
+                    <p class="text-gray-600 text-center text-sm mb-4">Luxury holiday home service & management app</p>
+
+                    <!-- View Project Button -->
+                    <div class="text-center mt-4">
+                        <button @click="open = true; initSwiper();" class="text-blue-600 font-semibold hover:underline">View Project →</button>
+                    </div>
+                </div>
+
+                <!-- Pop-up Modal -->
+                <div x-show="open" 
+                    x-cloak 
+                    x-trap="open"
+                    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-all duration-300"
+                    x-transition.opacity>
+
+                    <div class="bg-white p-6 rounded-lg max-w-lg mx-auto shadow-lg relative w-[90%] md:w-[50%] z-1000">
+                        
+                        <!-- Close Button -->
+                        <button @click="open = false" class="absolute top-3 right-3 text-gray-600 hover:text-black text-lg">
+                            ✖
+                        </button>
+
+                        <h2 class="text-2xl font-bold text-gray-800 text-center">Doodle Homes</h2>
+                        <p class="text-gray-600 text-center text-sm mb-4">Luxury holiday home service & management app</p>
+
+                        <!-- Project Image Carousel Inside Pop-up -->
+                        <div class="w-full h-48 bg-gray-100 rounded-lg overflow-hidden mb-4">
+                            <div class="swiper mySwiper h-full">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide flex justify-center items-center">
+                                        <img src="Images/doodle_home_collage.jpg" alt="Doodle Homes 1" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide flex justify-center items-center">
+                                        <img src="Images/doodle_home_2.jpg" alt="Doodle Homes 2" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="swiper-slide flex justify-center items-center">
+                                        <img src="Images/doodle_home_3.jpg" alt="Doodle Homes 3" class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm text-left">
+                            <li><strong>Instant Service Booking:</strong> Request housekeeping, maintenance, and more.</li>
+                            <li><strong>Luxury Concierge:</strong> Book private chefs, spa services, and premium amenities.</li>
+                            <li><strong>Smart Home Integration:</strong> Control lighting, temperature, and security.</li>
+                            <li><strong>Food & Dining:</strong> Order gourmet meals or schedule meal plans.</li>
+                            <li><strong>Real-Time Updates:</strong> Get instant notifications for bookings and confirmations.</li>
+                            <li><strong>Guest Experience Enhancement:</strong> Digital check-in, guidebooks, and recommendations.</li>
+                        </ul>
+
+                        <p class="mt-3 text-gray-700 text-sm text-center">
+                            Whether you're managing multiple properties or looking for a hassle-free holiday experience, 
+                            <strong>Doodle Homes simplifies it all.</strong>
+                        </p>
+
+                        <!-- Close Button -->
+                        <div class="text-center mt-4">
+                            <button @click="open = false" class="text-blue-600 font-semibold hover:underline">View Less ↑</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-10 mt-10">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <!-- About Section -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-3">About Us</h4>
+                    <p class="text-gray-400">We provide high-quality services to help businesses grow and succeed in the digital world.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Projects</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Details & Social Media -->
+                <div>
+                    <h4 class="text-xl font-semibold mb-3">📞 Contact Us</h4>
+                    <div class="space-y-3">
+                        <p class="flex items-center space-x-3">
+                            <span class="text-2xl">📱</span> 
+                            <span>+91 75065 41325</span>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <span class="fa-brands fa-facebook text-blue-600 text-2xl"></span> 
+                            <a href="#" class="hover:text-blue-400">Facebook</a>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <span class="fa-brands fa-instagram text-2xl bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-500 text-transparent bg-clip-text"></span> 
+                            <a href="#" class="hover:text-pink-400">Instagram</a>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <span class="fa-brands fa-x-twitter text-2xl"></span> 
+                            <a href="#" class="hover:text-blue-400">X</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10 text-gray-500">
+                <p>&copy; 2024 YourCompany. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+<!-- Swiper JS Initialization -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function initSwiper() {
+            new Swiper(".mySwiper", {
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }
+
+        document.querySelectorAll("[x-data]").forEach(el => {
+            el.addEventListener("click", function () {
+                setTimeout(initSwiper, 200); // Delay initialization for better rendering
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>

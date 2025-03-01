@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suntouch Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-transparent text-white absolute w-full z-20">
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+        <!-- Logo & Company Name -->
+<!-- Logo & Company Name -->
+<div class="flex items-center space-x-4">
+    <img src="Images/logo.png" alt="Company Logo" class="h-14 w-auto max-w-[120px] object-contain">
+    <h1 class="text-4xl font-bold">Suntouch Technology</h1>
+</div>
+
+
+
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+            ☰
+        </button>
+
+        <!-- Navigation Links for Desktop -->
+        <nav class="hidden md:flex space-x-7">
+            <a class="hover:text-2xl transition-all duration-500" href="#about" class="nav-link">About Us</a>
+            <a class="hover:text-2xl transition-all duration-500" href="#services" class="nav-link">Our Services</a>
+            <a class="hover:text-2xl transition-all duration-500" href="projects.html" class="nav-link">Projects</a>
+            <a class="hover:text-2xl transition-all duration-500" href="#gallery" class="nav-link">Our Gallery</a>
+            <a class="hover:text-2xl transition-all duration-500" href="#contact" class="nav-link">Contact Us</a>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+<div id="mobile-menu" class="hidden md:hidden fixed top-16 right-4 w-3/4 max-w-[250px] bg-gray-900 text-white p-4 space-y-2 rounded-lg shadow-lg">
+    <a href="#about" class="block py-2 px-4 hover:bg-gray-700 rounded-md">About Us</a>
+    <a href="#services" class="block py-2 px-4 hover:bg-gray-700 rounded-md">Our Services</a>
+    <a href="projects.html" class="block py-2 px-4 hover:bg-gray-700 rounded-md">Projects</a>
+    <a href="#gallery" class="block py-2 px-4 hover:bg-gray-700 rounded-md">Our Gallery</a>
+    <a href="#contact" class="block py-2 px-4 hover:bg-gray-700 rounded-md">Contact Us</a>
+</div>
+
+</header>
+
+<!-- Hero Section -->
+<section class="hero_section" 
+    style="background-image: url('Images/hero_section.jpeg');">
+</div>
+    <div class="container mx-auto text-center px-6 z-20">
+        <h1 class="text-5xl font-bold mb-4">Transform Your Business Digital Presence</h1>
+        <p class="text-lg mb-6">Innovative Solutions for Modern Enterprises</p>
+    </div>
+</section>
+
+
+
+  <!-- About Section -->
+<section id="about" class="py-16 bg-white">
+  <div class="container mx-auto flex flex-col md:flex-row items-center">
+    
+    <!-- Left Side: Image -->
+    <div class="md:w-1/2 w-full flex justify-center">
+      <img src="Images\Group Business People Working Office Stock Photo 1033424203 _ Shutterstock.jpg" alt="About Us" class="w-4/5 rounded-lg shadow-lg">
+    </div>
+
+    <!-- Right Side: Text Content -->
+    <div class="md:w-1/2 w-full px-8">
+      <h3 class="text-3xl font-bold text-blue-900 mb-4">Who We Are</h3>
+      <p class="text-gray-600 text-lg leading-relaxed mb-6">
+        We are a forward-thinking technology company dedicated to delivering innovative 
+        solutions that help businesses thrive in the digital age. With over a decade of 
+        experience, we combine technical expertise with creative thinking to transform 
+        ideas into reality.
+      </p>
+      
+      <!-- Stats Section
+      <div class="flex flex-wrap gap-8">
+        <div class="text-center">
+          <p class="text-2xl font-bold text-blue-900">10+</p>
+          <p class="text-gray-600">Years Experience</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl font-bold text-blue-900">200+</p>
+          <p class="text-gray-600">Projects Completed</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl font-bold text-blue-900">50+</p>
+          <p class="text-gray-600">Team Members</p>
+        </div>
+      </div>  -->
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Services Section -->
+<section id="services" class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+        <h3 class="text-3xl font-bold text-blue-900 mb-4">Our Services</h3>
+        <p class="text-gray-600 mb-12">We offer a comprehensive range of services to help your business succeed in the digital world</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="text-blue-500 text-4xl mb-4">🖥️</div>
+                <h4 class="text-xl font-semibold mb-2">End-to-End App Development Solutions</h4>
+                <p class="text-gray-600 mb-4">We specialize in custom website and web app development, ensuring your solutions are fast, secure, and scalable for your business needs.</p>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="text-blue-500 text-4xl mb-4">📦</div>
+                <h4 class="text-xl font-semibold mb-2">Service-Oriented Platform Development</h4>
+                <p class="text-gray-600 mb-4">We design platforms that streamline service delivery, offering intuitive interfaces that enhance user engagement and satisfaction.</p>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="text-blue-500 text-4xl mb-4">📲</div>
+                <h4 class="text-xl font-semibold mb-2">Digital Transformation & Smart Solutions</h4>
+                <p class="text-gray-600 mb-4">Delivering seamless mobile applications, we create smart solutions for both iOS and Android platforms, optimizing user interaction with your brand.</p>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="text-blue-500 text-4xl mb-4">📚</div>
+                <h4 class="text-xl font-semibold mb-2">Library and Educational Technology Solutions</h4>
+                <p class="text-gray-600 mb-4">We offer tailored educational platforms and digital library systems that empower learning and foster access to knowledge.</p>
+            </div>
+
+            <!-- Service Card 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="text-blue-500 text-4xl mb-4">🤖</div>
+                <h4 class="text-xl font-semibold mb-2">AI & Automation for Businesses</h4>
+                <p class="text-gray-600 mb-4">Leveraging AI and automation, we help businesses enhance efficiency, automate processes, and drive smarter decision-making.</p>
+            </div>
+
+            <!-- Service Card 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+                <div class="text-blue-500 text-4xl mb-4">🌥️</div>
+                <h4 class="text-xl font-semibold mb-2">Cloud & Hosting Solutions</h4>
+                <p class="text-gray-600 mb-4">We provide scalable cloud infrastructure and reliable hosting services, ensuring your applications and websites are fast and secure.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Featured Projects Section -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+        <h3 class="text-3xl font-bold text-blue-900 mb-8">Featured Projects</h3>
+
+        <div class="space-y-8">
+            <!-- Project Card 1 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img src="/path-to-image1.jpg" alt="E-Commerce Platform" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold">Next Home</h4>
+                    <p class="text-gray-600">All purpose instant service booking platform</p>
+                    <a href="projects.html?project=next-home" class="text-blue-600 font-semibold hover:underline mt-2 inline-block">
+                        View Project →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img src="/path-to-image2.jpg" alt="Financial Dashboard" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold">Library Management</h4>
+                    <p class="text-gray-600">Digitalize library </p>
+
+                    <a href="projects.html?project=library-management" class="text-blue-600 font-semibold hover:underline mt-2 inline-block">
+                          View Project →
+                    </a>
+                </div>
+				
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img src="/path-to-image3.jpg" alt="Mobile Banking App" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold">Assignments Submission</h4>
+                    <p class="text-gray-600">Secure financial transactions</p>
+                    <a href="projects.html?project=assignments-submission" class="text-blue-600 font-semibold hover:underline mt-2 inline-block">
+                          View Project →
+                    </a
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Meet Our Team Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+        <h3 class="text-3xl font-bold text-blue-900 mb-4">Meet Our Team</h3>
+        <p class="text-gray-600 mb-12">Our talented team of professionals is dedicated to delivering excellence</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Team Member 1 -->
+            <div class="text-center">
+                <img src="Images\Amit.png" alt="Amit Pandey" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                <h4 class="text-lg font-semibold">Amit Pandey</h4>
+                <p class="text-gray-500">CEO</p>
+                <div class="flex justify-center gap-4 mt-2">
+                    <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="text-center">
+                <img src="Images\Mayuri.jpg" alt="Mayuri Shingote" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                <h4 class="text-lg font-semibold">Mayuri Shingote</h4>
+                <p class="text-gray-500">Project Manager</p>
+                <div class="flex justify-center gap-4 mt-2">
+                    <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="text-center">
+                <img src="Images\Rahul.png" alt="Rahul Padwal" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                <h4 class="text-lg font-semibold">Rahul Padwal</h4>
+                <p class="text-gray-500">UI/UX Developer and Designer</p>
+                <div class="flex justify-center gap-4 mt-2">
+                    <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="text-center">
+                <img src="Images\Darshan.jpg" alt="Darshan Gowda" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                <h4 class="text-lg font-semibold">Darshan Gowda</h4>
+                <p class="text-gray-500">Backend Developer</p>
+                <div class="flex justify-center gap-4 mt-2">
+                    <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+
+<!-- Add Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+
+
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+      <h3 class="text-3xl mb-8">Our Gallery</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <img src="Images\50,000+ Free 3D Human & 3D Images.jpg" alt="Gallery 1" class="w-full h-48 object-cover rounded-lg" />
+        <img src="Images\cc6410e1-8580-4fee-87fb-4e07078ac21e.jpg" alt="Gallery 2" class="w-full h-48 object-cover rounded-lg" />
+        <img src="Images\29 Rustic Modern Blends for a Warm Conference Room Look.jpg" alt="Gallery 3" class="w-full h-48 object-cover rounded-lg" />
+        <img src="Images\Premium Photo _ Blur background of empty modern office background in city center Workspace interior design.jpg" alt="Gallery 4" class="w-full h-48 object-cover rounded-lg" />
+      </div>
+    </div>
+  </section>
+
+<!-- Footer Section -->
+<section id="contact">
+<footer class="bg-gray-900 text-white py-10">
+  <div class="container mx-auto px-6 lg:px-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+      <!-- About Section -->
+      <div>
+        <h4 class="text-xl font-semibold mb-3">About Us</h4>
+        <p class="text-gray-400">We provide high-quality services to help businesses grow and succeed in the digital world.</p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-semibold mb-3">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-blue-400">Home</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-blue-400">Services</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-blue-400">Projects</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-blue-400">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Details & Social Media -->
+      <div>
+        <h4 class="text-xl font-semibold mb-3">📞 Contact Us</h4>
+        <div class="space-y-3">
+          <p class="flex items-center space-x-3">
+            <span class="text-2xl">📱</span> 
+            <span>+91 75065 41325</span>
+          </p>
+          <p class="flex items-center space-x-3">
+            <span class="fa-brands fa-facebook text-blue-600 text-2xl"></span> 
+            <a href="#" class="hover:text-blue-400">Facebook</a>
+          </p>
+          <p class="flex items-center space-x-3">
+            <span class="fa-brands fa-instagram text-2xl bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-500 text-transparent bg-clip-text"></span> 
+            <a href="#" class="hover:text-pink-400">Instagram</a>
+          </p>
+          <p class="flex items-center space-x-3">
+            <span class="fa-brands fa-x-twitter text-2xl"></span> 
+            <a href="#" class="hover:text-blue-400">X</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-10 text-gray-500">
+      <p>&copy; 2024 YourCompany. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</section>
+
+<script src="script.js"></script>
+
+
+
+
+</body>
+
