@@ -17,7 +17,7 @@
 <body class="bg-gray-50">
 
 <!-- Header -->
-<header class="bg-transparent text-white absolute w-full z-0">
+<header id="navbar" class="bg-transparent shadow-xl fixed text-white w-full z-30">
     <div class="container mx-auto px-4 flex justify-between items-center py-4">
         <!-- Logo & Company Name -->
         <div class="flex items-center space-x-4">
@@ -32,11 +32,11 @@
 
         <!-- Navigation Links for Desktop -->
         <nav class="hidden md:flex space-x-7 ">
-            <a class="hover:text-2xl transition-all duration-500" href="index.html" class="nav-link">Home</a>
-            <a class="hover:text-2xl transition-all duration-500" href="index.html#about" class="nav-link">About Us</a>
-            <a class="hover:text-2xl transition-all duration-500" href="index.html#services" class="nav-link">Our Services</a>
-            <a class="hover:text-2xl transition-all duration-500" href="projects.html" class="nav-link">Projects</a>
-            <a class="hover:text-2xl transition-all duration-500" href="index.html#contact" class="nav-link">Contact Us</a>
+            <a class="text-lg hover:text-2xl transition-all duration-500" href="index.html" class="nav-link">Home</a>
+            <a class="text-lg hover:text-2xl transition-all duration-500" href="index.html#about" class="nav-link">About Us</a>
+            <a class="text-lg hover:text-2xl transition-all duration-500" href="index.html#services" class="nav-link">Our Services</a>
+            <a class="text-lg hover:text-2xl transition-all duration-500" href="projects.html" class="nav-link">Projects</a>
+            <a class="text-lg hover:text-2xl transition-all duration-500" href="index.html#contact" class="nav-link">Contact Us</a>
         </nav>
     </div>
 
@@ -52,11 +52,11 @@
 
 <!-- Hero Section for Projects Page -->
 <section class="hero_section" 
-    style="background-image: url('Images/project_page.jpeg');">
+    style="background-image: url('Images/fproject2.jpg');">
 
-    <div class="container mx-auto text-center px-6 z-20">
-        <h1 class="text-5xl font-bold mb-4">Our Featured Projects</h1>
-        <p class="text-lg mb-6">Discover our portfolio of innovative solutions</p>
+    <div id="hidden-text" class="transition-opacity duration-500 container mx-auto text-center px-6 z-20">
+        <h1 class="text-6xl font-bold mb-4">Our Featured Projects</h1>
+        <p class="text-2xl mb-6">Discover our portfolio of innovative solutions</p>
     </div>
 </section>
 
@@ -65,28 +65,37 @@
     <div class="container mx-auto text-center">
         <h3 class="text-3xl font-bold text-blue-900 mb-8">Featured Projects</h3>
 
-        <div class="flex flex-wrap justify-center gap-8">
+        <div class="flex flex-wrap items-center justify-center gap-8">
+
+
+            <!-- Next Home -->
             <div x-data="{ open: false }" class="relative w-full max-w-sm">
 
                 <!-- Project Card -->
-                <div class="bg-white shadow-lg rounded-xl p-6 border border-gray-200">
+                <div class="relative shadow-lg rounded-lg overflow-hidden h-48">
+                <img src="/Images/card1.jpg" alt="E-Commerce Platform" class="absolute rounded-xl w-full h-full object-cover">
+                <div class="absolute bg-black bg-opacity-40 inset-0">
+                    <div class="p-6 relative h-48 z-20 flex-col justify-center items-center mb-12">
                     <h4 class="text-2xl font-bold text-gray-800 text-center mt-4">Doodle Homes</h4>
-                    <p class="text-gray-600 text-center text-sm mb-4">Luxury holiday home service & management app</p>
+                    <p class="text-white text-center text-sm mb-4">Luxury holiday home service & management app</p>
 
                     <!-- View Project Button -->
-                    <div class="text-center mt-4">
-                        <button @click="open = true; initSwiper();" class="text-blue-600 font-semibold hover:underline">View Project →</button>
+                    <div class="text-center w-full">
+                        <button @click="open = true; initSwiper();" class="text-blue-600 font-semibold hover:underline shadow-lg rounded-xl bg-black bg-opacity-40 inset-0 w-32">View Project →</button>
                     </div>
+                </div>
+                </div>
                 </div>
 
                 <!-- Pop-up Modal -->
                 <div x-show="open" 
                     x-cloak 
                     x-trap="open"
-                    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-all duration-300"
+                    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-all duration-300 z-30"
                     x-transition.opacity>
 
-                    <div class="bg-white p-6 rounded-lg max-w-lg mx-auto shadow-lg relative w-[90%] md:w-[50%] z-1000">
+                    <div class="bg-white p-6 rounded-lg w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] shadow-lg relative z-1000 
+                    h-auto max-h-[80vh] sm:max-h-[90vh] md:max-h-[75vh] lg:max-h-[70vh] overflow-y-auto">
                         
                         <!-- Close Button -->
                         <button @click="open = false" class="absolute top-3 right-3 text-gray-600 hover:text-black text-lg">
@@ -97,23 +106,25 @@
                         <p class="text-gray-600 text-center text-sm mb-4">Luxury holiday home service & management app</p>
 
                         <!-- Project Image Carousel Inside Pop-up -->
-                        <div class="w-full h-48 bg-gray-100 rounded-lg overflow-hidden mb-4">
-                            <div class="swiper mySwiper h-full">
+                         <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="w-full md:w-1/2 bg-gray-100 rounded-lg overflow-hidden mb-4">
+                            <div class="swiper mySwiper h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide flex justify-center items-center">
-                                        <img src="Images/doodle_home_collage.jpg" alt="Doodle Homes 1" class="w-full h-full object-cover">
+                                        <img src="Images/next1.jpg" alt="Doodle Homes 1" class="w-full h-full object-cover">
                                     </div>
                                     <div class="swiper-slide flex justify-center items-center">
-                                        <img src="Images/doodle_home_2.jpg" alt="Doodle Homes 2" class="w-full h-full object-cover">
+                                        <img src="Images/next2.jpg" alt="Doodle Homes 2" class="w-full h-full object-contain">
                                     </div>
                                     <div class="swiper-slide flex justify-center items-center">
-                                        <img src="Images/doodle_home_3.jpg" alt="Doodle Homes 3" class="w-full h-full object-cover">
+                                        <img src="Images/next3.jpg" alt="Doodle Homes 3" class="w-full h-full object-cover">
                                     </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
                         </div>
 
+                        <div>
                         <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm text-left">
                             <li><strong>Instant Service Booking:</strong> Request housekeeping, maintenance, and more.</li>
                             <li><strong>Luxury Concierge:</strong> Book private chefs, spa services, and premium amenities.</li>
@@ -127,6 +138,8 @@
                             Whether you're managing multiple properties or looking for a hassle-free holiday experience, 
                             <strong>Doodle Homes simplifies it all.</strong>
                         </p>
+                    </div>
+                </div>
 
                         <!-- Close Button -->
                         <div class="text-center mt-4">
@@ -135,6 +148,174 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <!-- BooksEra -->
+            <div x-data="{ open: false }" class="relative w-full max-w-sm">
+
+                <!-- Project Card -->
+                <div class="relative shadow-lg rounded-lg overflow-hidden h-48">
+                    <img src="/Images/card2.jpg" alt="E-Commerce Platform" class="absolute rounded-xl w-full h-full object-cover">
+                    <div class="absolute bg-black bg-opacity-40 inset-0">
+                        <div class="p-6 relative h-48 z-20 flex-col justify-center items-center mb-12">
+                        <h4 class="text-2xl font-bold text-gray-800 text-center mt-4">BooksEra</h4>
+                        <p class="text-white text-center text-sm mb-4">A Digital Library</p>
+    
+                        <!-- View Project Button -->
+                        <div class="text-center w-full">
+                            <button @click="open = true; initSwiper();" class="text-blue-600 font-semibold hover:underline shadow-lg rounded-xl bg-black bg-opacity-40 inset-0 w-32">View Project →</button>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+
+                <!-- Pop-up Modal -->
+                <div x-show="open" 
+                    x-cloak 
+                    x-trap="open"
+                    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-all duration-300 z-30"
+                    x-transition.opacity>
+
+                    <div class="bg-white p-6 rounded-lg w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] shadow-lg relative z-1000 
+                    h-auto max-h-[80vh] sm:max-h-[90vh] md:max-h-[75vh] lg:max-h-[70vh] overflow-y-auto">
+                        
+                        <!-- Close Button -->
+                        <button @click="open = false" class="absolute top-3 right-3 text-gray-600 hover:text-black text-lg">
+                            ✖
+                        </button>
+
+                        <h2 class="text-2xl font-bold text-gray-800 text-center">BooksEra</h2>
+                        <p class="text-gray-600 text-center text-sm mb-4">Smart Library Management for a Smarter Future.</p>
+
+                        <!-- Project Image Carousel Inside Pop-up -->
+                         <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="w-full md:w-1/2 bg-gray-100 rounded-lg overflow-hidden mb-4">
+                            <div class="swiper mySwiper h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide flex justify-center items-center">
+                                        <img src="Images/lib1.jpg" alt="Doodle Homes 1" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="swiper-slide flex justify-center items-center">
+                                        <img src="Images/lib2.jpg" alt="Doodle Homes 2" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="swiper-slide flex justify-center items-center">
+                                        <img src="Images/lib3.jpg" alt="Doodle Homes 3" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm text-left">
+                            <li><strong>Easy Access:</strong> Find and request books in real-time.</li>
+                            <li><strong>Automated Alerts:</strong> Notifications for due dates and availability.</li>
+                            <li><strong>Community Sharing:</strong> Facilitate book exchanges and sales.</li>
+                            <li><strong>User Exchange Feature:</strong> Allows users to share academic materials such as notes, assignments, research papers, and personal books.</li>
+                            <li><strong>Time-Saving:</strong> Reduces unnecessary library visits.</li>
+                        </ul>
+
+                        <p class="mt-3 text-gray-700 text-sm text-center">
+                            Simplifying Libraries, Amplifying Learning. 
+                        </p>
+                        <p class="mt-3 text-gray-700 text-sm text-center">
+                            <strong>"Where Books Meet Technology."</strong> 
+                        </p>
+                    </div>
+                </div>
+                        <!-- Close Button -->
+                        <div class="text-center mt-4">
+                            <button @click="open = false" class="text-blue-600 font-semibold hover:underline">View Less ↑</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Assignment -->
+            <div x-data="{ open: false }" class="relative w-full max-w-sm">
+
+                <!-- Project Card -->
+                <div class="relative shadow-lg rounded-lg overflow-hidden h-48">
+                    <img src="/Images/card3.jpg" alt="E-Commerce Platform" class="absolute rounded-xl w-full h-full object-cover object-bottom">
+                    <div class="absolute bg-black bg-opacity-40 inset-0">
+                        <div class="p-6 relative h-48 z-20 flex-col justify-center items-center mb-12">
+                        <h4 class="text-2xl font-bold text-gray-800 text-center mt-4">EduVault</h4>
+                        <p class="text-white text-center text-sm mb-4">Your assignment submission companion</p>
+    
+                        <!-- View Project Button -->
+                        <div class="text-center w-full">
+                            <button @click="open = true; initSwiper();" class="text-blue-600 font-semibold hover:underline shadow-lg rounded-xl bg-black bg-opacity-40 inset-0 w-32">View Project →</button>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+
+                <!-- Pop-up Modal -->
+                <div x-show="open" 
+                    x-cloak 
+                    x-trap="open"
+                    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-all duration-300 z-30"
+                    x-transition.opacity>
+
+                    <div class="bg-white p-6 rounded-lg w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] shadow-lg relative z-1000 
+                    h-auto max-h-[80vh] sm:max-h-[90vh] md:max-h-[75vh] lg:max-h-[70vh] overflow-y-auto">
+                        
+                        <!-- Close Button -->
+                        <button @click="open = false" class="absolute top-3 right-3 text-gray-600 hover:text-black text-lg">
+                            ✖
+                        </button>
+
+                        <h2 class="text-2xl font-bold text-gray-800 text-center">EduVaulta</h2>
+                        <p class="text-gray-600 text-center text-sm mb-4">Organized workflow for students</p>
+
+                        <!-- Project Image Carousel Inside Pop-up -->
+                         <!-- <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div class="w-full md:w-1/2 bg-gray-100 rounded-lg overflow-hidden mb-4">
+                            <div class="swiper mySwiper h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide flex justify-center items-center">
+                                        <img src="Images/lib1.jpg" alt="Doodle Homes 1" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="swiper-slide flex justify-center items-center">
+                                        <img src="Images/lib2.jpg" alt="Doodle Homes 2" class="w-full h-full object-contain">
+                                    </div>
+                                    <div class="swiper-slide flex justify-center items-center">
+                                        <img src="Images/lib3.jpg" alt="Doodle Homes 3" class="w-full h-full object-contain">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm text-left">
+                            <li><strong>Easy Access:</strong> Find and request books in real-time.</li>
+                            <li><strong>Automated Alerts:</strong> Notifications for due dates and availability.</li>
+                            <li><strong>Community Sharing:</strong> Facilitate book exchanges and sales.</li>
+                            <li><strong>User Exchange Feature:</strong> Allows users to share academic materials such as notes, assignments, research papers, and personal books.</li>
+                            <li><strong>Time-Saving:</strong> Reduces unnecessary library visits.</li>
+                        </ul>
+
+                        <p class="mt-3 text-gray-700 text-sm text-center">
+                            Simplifying Libraries, Amplifying Learning. 
+                        </p>
+                        <p class="mt-3 text-gray-700 text-sm text-center">
+                            <strong>"Where Books Meet Technology."</strong> 
+                        </p>
+                    </div>
+                </div> -->
+                        <!-- Close Button -->
+                         <p><strong class="text-red-500">Under Construction</strong></p>
+                        <div class="text-center mt-4">
+                            <button @click="open = false" class="text-blue-600 font-semibold hover:underline">View Less ↑</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div> 
 </section>

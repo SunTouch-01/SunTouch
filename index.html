@@ -11,11 +11,11 @@
 <body>
 
 <!-- Header -->
-<header class="bg-transparent text-white absolute w-full z-20">
+<header id="navbar" class="bg-transparent shadow-xl text-white fixed w-full z-30">
     <div class="container mx-auto px-4 flex justify-between items-center py-4">
         <!-- Logo & Company Name -->
 <!-- Logo & Company Name -->
-<div class="flex items-center space-x-4">
+<div class="flex items-center space-x-4 z-20">
     <img src="Images/logo.png" alt="Company Logo" class="h-14 w-auto max-w-[120px] object-contain">
     <h1 class="text-4xl font-bold">Suntouch Technology</h1>
 </div>
@@ -30,16 +30,16 @@
 
         <!-- Navigation Links for Desktop -->
         <nav class="hidden md:flex space-x-7">
-            <a class="hover:text-2xl transition-all duration-500" href="#about" class="nav-link">About Us</a>
-            <a class="hover:text-2xl transition-all duration-500" href="#services" class="nav-link">Our Services</a>
-            <a class="hover:text-2xl transition-all duration-500" href="projects.html" class="nav-link">Projects</a>
-            <a class="hover:text-2xl transition-all duration-500" href="#gallery" class="nav-link">Our Gallery</a>
-            <a class="hover:text-2xl transition-all duration-500" href="#contact" class="nav-link">Contact Us</a>
+            <a class="text-lg hover:text-2xl transition-all duration-500" href="#about" class="nav-link">About Us</a>
+            <a class="text-lg hover:text-2xl transition-all duration-500" href="#services" class="nav-link">Our Services</a>
+            <a class="text-lg hover:text-2xl transition-all duration-500" href="projects.html" class="nav-link">Projects</a>
+            <a class="text-lg hover:text-2xl transition-all duration-500" href="#gallery" class="nav-link">Our Gallery</a>
+            <a class="text-lg hover:text-2xl transition-all duration-500" href="#contact" class="nav-link">Contact Us</a>
         </nav>
     </div>
 
     <!-- Mobile Menu (Hidden by Default) -->
-<div id="mobile-menu" class="hidden md:hidden fixed top-16 right-4 w-3/4 max-w-[250px] bg-gray-900 text-white p-4 space-y-2 rounded-lg shadow-lg">
+<div id="mobile-menu" class="hidden md:hidden fixed top-16 right-4 w-3/4 max-w-[250px] bg-gray-900 text-white p-4 space-y-2 rounded-lg shadow-lg z-20">
     <a href="#about" class="block py-2 px-4 hover:bg-gray-700 rounded-md">About Us</a>
     <a href="#services" class="block py-2 px-4 hover:bg-gray-700 rounded-md">Our Services</a>
     <a href="projects.html" class="block py-2 px-4 hover:bg-gray-700 rounded-md">Projects</a>
@@ -51,9 +51,9 @@
 
 <!-- Hero Section -->
 <section class="hero_section" 
-    style="background-image: url('Images/hero_section.jpeg');">
+    style="background-image: url('Images/softwarebg.jpg');">
 </div>
-    <div class="container mx-auto text-center px-6 z-20">
+    <div id="hidden-text" class="transition-opacity duration-500 container mx-auto text-center px-6 z-20">
         <h1 class="text-5xl font-bold mb-4">Transform Your Business Digital Presence</h1>
         <p class="text-lg mb-6">Innovative Solutions for Modern Enterprises</p>
     </div>
@@ -163,7 +163,7 @@
         <div class="space-y-8 m-5">
             <!-- Project Card 1 -->
             <div class="relative shadow-lg rounded-lg overflow-hidden h-48">
-                <img src="/Images/image1.jpg" alt="E-Commerce Platform" class="absolute w-full h-full object-cover object-bottom">
+                <img src="/Images/image.jpg" alt="E-Commerce Platform" class="absolute w-full h-full object-cover object-bottom">
                 <div class="bg-black bg-opacity-40 absolute inset-0">
                 <div class="p-6 relative h-48 z-20 flex-col justify-center items-center mt-10"> 
                     <h4 class="text-3xl font-semibold text-white">Next Home</h4>
@@ -196,8 +196,8 @@
                 <img src="Images/image3.jpg" alt="Mobile Banking App" class="absolute w-full h-full object-cover">
                 <div class="bg-black bg-opacity-40 absolute inset-0">
                 <div class="p-6 relative h-48 z-20 flex-col justify-center items-center mt-10">
-                    <h4 class="text-3xl font-semibold text-white">Assignments Submission</h4>
-                    <p class="text-white">Secure financial transactions</p>
+                    <h4 class="text-3xl font-semibold text-white">EduVault</h4>
+                    <p class="text-white">Your assignment submission companion</p>
                     <a href="projects.html?project=assignments-submission" class="text-blue-600 font-semibold hover:underline mt-2 inline-block">
                           View Project →
                     </a
@@ -318,11 +318,11 @@
           </p>
           <p class="flex items-center space-x-3">
             <span class="fa-brands fa-instagram text-2xl bg-gradient-to-r from-yellow-500 via-pink-500 to-purple-500 text-transparent bg-clip-text"></span> 
-            <a href="#" class="hover:text-pink-400">Instagram</a>
+            <a href="https://www.instagram.com/suntouchtechnology01/?hl=en" class="hover:text-pink-400">Instagram</a>
           </p>
           <p class="flex items-center space-x-3">
             <span class="fa-brands fa-x-twitter text-2xl"></span> 
-            <a href="#" class="hover:text-blue-400">X</a>
+            <a href="https://x.com/SunTouchTech01" class="hover:text-blue-400">X</a>
           </p>
         </div>
       </div>

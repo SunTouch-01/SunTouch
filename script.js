@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.addEventListener("scroll", function () {
             if (window.scrollY > heroSection.offsetHeight - 50) {
                 navbar.classList.add("bg-white", "shadow-lg", "text-black");
-                navbar.classList.remove("bg-transparent", "text-white");
+                navbar.classList.remove("text-white");
 
                 if (menuBtn) {
                     menuBtn.classList.add("text-black");
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             } else {
                 navbar.classList.remove("bg-white", "shadow-lg", "text-black");
-                navbar.classList.add("bg-transparent", "text-white");
+                navbar.classList.add("text-white");
 
                 if (menuBtn) {
                     menuBtn.classList.remove("text-black");
@@ -105,3 +105,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    const hiddenText = document.getElementById("hidden-text");
+
+    if (window.scrollY > navbar.offsetHeight) {
+        hiddenText.classList.add("opacity-0");
+    } else {
+        hiddenText.classList.remove("opacity-0");
+    }
+});
+
