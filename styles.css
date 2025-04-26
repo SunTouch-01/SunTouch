@@ -32,6 +32,10 @@ html{
   z-index: 1; /* Below content */
 }
 
+.custom-object-position {
+  object-position: center 30%;
+}
+
 .mentor-section {
   background: #f9f9f9;
   padding: 60px 20px;
